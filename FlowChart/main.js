@@ -13,7 +13,7 @@ window.onload = function() {
 		type : 'image',
 		img_path : 'workflow_box.png',
 		x : 10,
-		y : 50,
+		y : 130,
 		width : 160,
 		height : 80,
 		text : [ "Search", "(Begin Here)" ],
@@ -23,9 +23,17 @@ window.onload = function() {
 		}
 	}, {
 		type : 'image',
+		img_path : 'left_angled_double_arrow.png',
+		x : 170,
+		y : 150,
+		width : 87,
+		height : 75,
+		text : [""],
+	}, {
+		type : 'image',
 		img_path : 'workflow_box.png',
 		x : 10,
-		y : 150,
+		y : 270,
 		width : 160,
 		height : 80,
 		text : [ "View Single", "Search Results" ],
@@ -33,11 +41,19 @@ window.onload = function() {
 			pages["page1"].hide();
 			pages["page2"].show();
 		}
+	},{
+		type : 'image',
+		img_path : 'right_angled_double_arrow.png',
+		x : 170,
+		y : 250,
+		width : 87,
+		height : 75,
+		text : [""],
 	}, {
 		type : 'image',
 		img_path : 'workflow_box.png',
 		x : 270,
-		y : 100,
+		y : 200,
 		width : 160,
 		height : 80,
 		text : [ "Browse Results", "Summary" ],
@@ -47,9 +63,17 @@ window.onload = function() {
 		}
 	}, {
 		type : 'image',
+		img_path : 'right_arrow.png',
+		x : 440,
+		y : 210,
+		width : 44,
+		height : 54,
+		text : [""],
+	}, {
+		type : 'image',
 		img_path : 'workflow_box.png',
 		x : 500,
-		y : 100,
+		y : 200,
 		width : 160,
 		height : 80,
 		text : [ "Download" ],

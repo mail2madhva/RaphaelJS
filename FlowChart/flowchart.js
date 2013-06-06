@@ -75,7 +75,7 @@ function FlowChart(paper, pages) {
 			page_set = pages[page_num];
 		}
 		
-		var img = paper.image("workflow_box.png", x, y, width, height);
+		var img = paper.image(image_path, x, y, width, height);
 //        .transform("t" + sourceX + "," + sourceY + "s" + scaleX +","+ scaleY + ",0,0"); 
 		page_set.push(img);
 		var text_x = x + width / 2;
