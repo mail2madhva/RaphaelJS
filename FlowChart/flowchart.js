@@ -1,3 +1,7 @@
+/*
+ * @author: Madhu V Rao
+ * Flowchart builder class - accepts a page with all kinds of shapes/images
+ */
 function FlowChart(paper, pages) {
 	var self = this;
 	self.createPage = function createPage(page_struct_array, page_num, visible) {
@@ -35,14 +39,16 @@ function FlowChart(paper, pages) {
 
 		var rect = paper.rect(x, y, width, height);
 		page_set.push(rect);
-//		page_set.push(rect.attr({
-//			fill : '#D2E9DD'
-//		}));
+		page_set.push(rect.attr({
+			stroke : '#008000',
+			'stroke-width' : 1
+		}));
 		page_set.push(rect.glow({
 			color : '#D2E9DD',
 			offsety : -1
 		}));
 		
+		//this logic handles placing the text message on the rectangle.
 		var text_x = x + width / 2;
 		var text_y = y + height / 2;
 		for ( var i = 1; i <= text.length; i++) {
