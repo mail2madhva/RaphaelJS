@@ -655,8 +655,11 @@ window.onload = function() {
 	flowChart.createPage(page_struct["page5"], "page5", false);
 	//transform to different location , centring instead of changing all of the elements.
 	pages["page1"].transform("t175, 50");
-	pages["page1"].show();
 	pages["page5"].transform("t115, 20");
 	pages["page2"].transform("t115, 20");
 	pages["page3"].transform("t115, 00");
+	
+	var container = document.getElementById("help_page_container");
+	pages[container.getAttribute("page_num")].show(); 
+	
 }

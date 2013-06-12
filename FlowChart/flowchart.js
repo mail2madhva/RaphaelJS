@@ -49,7 +49,8 @@ function FlowChart(paper, pages) {
 		page_set.push(rect);
 		page_set.push(rect.attr({
 			stroke : rectObj.borderColor,
-			'stroke-width' : 1
+			'stroke-width' : 1,
+			'cursor': 'pointer'
 		}));
 
 		rect.node.onclick = rectObj.func;
@@ -65,7 +66,7 @@ function FlowChart(paper, pages) {
 			page_set = pages[page_num];
 		}
 
-		var img = paper.image(image_path, x, y, width, height);
+		var img = paper.image(image_path, x, y, width, height).attr({'cursor': 'pointer'});
 		//        .transform("t" + sourceX + "," + sourceY + "s" + scaleX +","+ scaleY + ",0,0"); 
 		page_set.push(img);
 		var text_x = x + width / 2;
@@ -83,6 +84,7 @@ function FlowChart(paper, pages) {
 				fill : '#000',
 				"font-size" : 18,
 				"font-family" : "Arial, Helvetica, sans-serif",
+				'cursor': 'pointer'
 			});
 			my_text.node.onclick = func;
 			page_set.push(my_text);
@@ -101,7 +103,8 @@ function FlowChart(paper, pages) {
 		var text_obj = paper.text(textObj.x, textObj.y, textObj.text).attr({
 			fill : textObj.color,
 			"font-size" : textObj.size,
-			"font-family" : textObj.font
+			"font-family" : textObj.font,
+			'cursor': 'pointer'
 		//"Arial, Helvetica, sans-serif",
 		});
 		
@@ -123,7 +126,8 @@ function FlowChart(paper, pages) {
 		var path = paper.path(pathObj.path);
 		page_set.push(path.attr({
 			stroke : pathObj.color,
-			'stroke-width' : 1
+			'stroke-width' : 1,
+			'cursor': 'pointer'
 		}));
 	}
 }
